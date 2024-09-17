@@ -15,6 +15,7 @@ header{
     justify-content: space-between;
     padding: .8rem 1rem;
     align-items: center;
+    height: 4rem;
 }
 
 header a img{
@@ -42,7 +43,7 @@ header a img{
     padding: 15px 20px;
     background-color: rgb(59, 59, 59);
     height: 2.2rem;
-    border-style: solid;
+    border: none;
 }
 
 .btn{
@@ -72,6 +73,113 @@ header a img{
 }
 
 main{
-    background-color: white;
-    height: 82vh;
+    height: calc(100vh - 8rem);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+aside{
+    background-color: rgb(18, 18, 18);
+    height: 100%;
+    width: 19rem;
+    border-radius: .5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: .5rem;
+}
+
+.your_lib{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+}
+
+.create_library{
+    background-color: rgb(32, 32, 32);
+    padding: 1rem;
+    gap: 10px;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.create_library button{
+    margin-top: 1.3rem;
+    width: 10rem;
+}
+
+.policy{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px 0;
+    margin: 1rem;
+}
+
+.policy-2{
+    grid-column: span 2;
+}
+
+.policy-6{
+    grid-column: span 3;
+}
+
+.policy-7{
+    grid-column: span 3;
+}
+
+.policy-7:hover{
+    text-decoration: underline;
+}
+
+.policy a{
+    text-decoration: none;
+    color: rgb(151, 151, 151);
+    font-size: .8rem;
+}
+
+.lngbtn{
+    width: 6rem;
+    color: white;
+    background: none;
+    border-radius: 1rem;
+    padding: .5rem .8rem;
+    margin-left: 1rem;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid rgb(151, 151, 151);
+}
+
+.lngbtn:hover{
+    scale: 1.02;
+    border-color: white;
+}
+
+.lngbtn i {
+    margin-right: 4px;
+}
+
+.main_content{
+    border-radius: .5rem;
+    background-color: rgb(26, 26, 26);
+    width: calc(100vw - 21rem);
+    overflow-y: auto;
+    height: 100%;
+}
+
+footer{
+    display: flex;
+    background: linear-gradient(90deg, rgb(175, 120, 252), rgb(130, 168, 255));
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: .5rem;
+    height: 3rem;
+    font-weight: bold;
+    margin: .5rem;
+    color: white;
 }
