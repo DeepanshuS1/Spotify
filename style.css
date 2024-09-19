@@ -2,6 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    background: #181818;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #535353;
+    border-radius: 10px;
+    border: 2px solid #181818;
 }
 
 body{
@@ -20,6 +35,7 @@ header{
 
 header a img{
     filter: hue-rotate(80deg);
+    width: 2rem;
 }
 
 .search_bar{
@@ -52,6 +68,7 @@ header a img{
     padding: .7rem 1rem;
     border: none;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -81,35 +98,39 @@ main{
 aside{
     background-color: rgb(18, 18, 18);
     height: 100%;
-    width: 19rem;
+    width: 17rem;
     border-radius: .5rem;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: .5rem;
 }
 
 .your_lib{
     display: flex;
     justify-content: space-between;
+    color: rgb(151, 151, 151);
     align-items: center;
-    height: 3rem;
+    height: 2rem;
+    margin: 0 1rem;
 }
 
 .create_library{
     background-color: rgb(32, 32, 32);
     padding: 1rem;
     gap: 10px;
-    height: 10rem;
+    height: 9rem;
+    font-size: .8rem;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
 }
 
 .create_library button{
-    margin-top: 1.3rem;
     width: 10rem;
+    margin-top: .8rem;
+    padding: .5rem .8rem;
 }
 
 .policy{
@@ -117,11 +138,15 @@ aside{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     gap: 10px 0;
-    margin: 1rem;
+    margin: .2rem 1rem;
 }
 
 .policy-2{
     grid-column: span 2;
+}
+
+.policy-4{
+    justify-self: center;
 }
 
 .policy-6{
@@ -139,7 +164,7 @@ aside{
 .policy a{
     text-decoration: none;
     color: rgb(151, 151, 151);
-    font-size: .8rem;
+    font-size: .75rem;
 }
 
 .lngbtn{
@@ -166,9 +191,53 @@ aside{
 .main_content{
     border-radius: .5rem;
     background-color: rgb(26, 26, 26);
-    width: calc(100vw - 21rem);
+    width: calc(100vw - 19rem);
     overflow-y: auto;
     height: 100%;
+}
+
+.headline{
+    display: flex;
+    height: 3rem;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 1.2rem;
+    color: white;
+}
+
+.headline h2:hover,
+.headline a:hover{
+    text-decoration: underline;
+}
+
+.headline a{
+    text-decoration: none;
+    color: rgb(151, 151, 151);
+    font-size: .8rem;
+}
+
+.artists{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0 1rem;
+}
+
+.singer{
+    height: 17rem;
+    width: 225px;
+    font-size: .8rem;
+    color: white;
+}
+
+.singer img{
+    border-radius: 50%;
+    width: 200px;
+}
+
+.singer p{
+    color: rgb(151, 151, 151);
+    margin-top: 5px;
 }
 
 footer{
