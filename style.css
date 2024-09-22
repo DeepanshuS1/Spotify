@@ -14,7 +14,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: #535353;
+    background-color: #212121;
     border-radius: 10px;
     border: 2px solid #181818;
 }
@@ -34,7 +34,6 @@ header{
 }
 
 header a img{
-    filter: hue-rotate(80deg);
     width: 2rem;
 }
 
@@ -44,12 +43,27 @@ header a img{
     align-items: center;
 }
 
-.home_icon{
-    background-color: rgb(59, 59, 59);
-    font-size: 2rem;
-    padding: 10px;
+.home_icon,
+.playbtn{
+    height: 2.5rem;
+    width: 2.5rem;
     margin-right: 10px;
-    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: #212121;
+    border-radius: 50%;
+    color: white;
+}
+
+.home_icon i{
+    color: white;
+}
+
+.home_icon:hover i{
+    color: black;
 }
 
 .search_input{
@@ -98,7 +112,7 @@ main{
 aside{
     background-color: rgb(18, 18, 18);
     height: 100%;
-    width: 17rem;
+    width: 16rem;
     border-radius: .5rem;
     color: white;
     display: flex;
@@ -191,7 +205,7 @@ aside{
 .main_content{
     border-radius: .5rem;
     background-color: rgb(26, 26, 26);
-    width: calc(100vw - 19rem);
+    width: calc(100vw - 18rem);
     overflow-y: auto;
     height: 100%;
 }
@@ -216,18 +230,22 @@ aside{
     font-size: .8rem;
 }
 
-.artists{
+.artists,
+.albums{
     display: flex;
     gap: 10px;
     margin-top: 10px;
-    padding: 0 1rem;
+    padding: 0 .3rem;
 }
 
 .singer{
-    height: 17rem;
+    height: 16rem;
     width: 225px;
     font-size: .8rem;
+    padding: 0 5px;
+    border-radius: .3rem;
     color: white;
+    position: relative;
 }
 
 .singer img{
@@ -238,6 +256,36 @@ aside{
 .singer p{
     color: rgb(151, 151, 151);
     margin-top: 5px;
+}
+
+.playbtn{
+    color: black;
+    margin: 0;
+    font-size: 1.9rem;
+    position: absolute;
+    bottom: 2.5rem;
+    opacity: 0;
+    right: 1rem;
+    transition: all .3s ease;
+    background-color: rgb(56, 185, 56);
+}
+
+.singer:hover .playbtn{
+    opacity: 1;
+    bottom: 4.5rem;
+}
+
+.albums .singer{
+    font-size: .9rem;
+    height: 17rem;
+}
+
+.albums .singer img{
+    border-radius: .5rem;
+}
+
+.singer:hover{
+    background: linear-gradient(rgb(26, 26, 26),#212121);
 }
 
 footer{
