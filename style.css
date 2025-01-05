@@ -62,18 +62,128 @@ header a img{
     color: white;
 }
 
-.home_icon:hover i{
-    color: greenyellow;
+.home_icon::before{
+    content: 'Home';
+    position: absolute;
+    color: white;
+    background-color: #212121;
+    padding: 5px;
+    font-size: .9rem;
+    border-radius: 6px;
+    opacity: 0;
+    top: 50px;
+    transition: all .3s ease;
+}
+
+.home_icon:hover::before{
+    opacity: 1;
+}
+
+.home_icon:hover{
+    scale: 1.02;
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1.3rem;
+    width: 30rem;
+    padding: 15px 10px;
+    height: 2.5rem;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(151, 151, 151);
+    background-color: rgb(42, 42, 42);
+}
+
+.search:hover{
+    background-color: rgb(59, 59, 59);
+    color: white;
+}
+
+.search label{
+    display: flex;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search label::before{
+    content: 'Search';
+    position: absolute;
+    top: 45px;
+    left: -15px;
+    color: white;
+    background-color: #212121;
+    padding: 5px;
+    font-size: .9rem;
+    border-radius: 6px;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.search label:hover::before{
+    opacity: 1;
+    top: 50px;
+}
+
+.browsebtn{
+    color: rgb(151, 151, 151);
+    border-left: 2px solid rgb(151, 151, 151);
+    padding-left: 10px;
+    position: relative;
+}
+
+.browsebtn:hover{
+    color: white;
+    scale: 1.02;
+}
+
+.browsebtn::after{
+    content: 'Browse';
+    position: absolute;
+    top: 45px;
+    left: -6px;
+    color: white;
+    background-color: #212121;
+    padding: 5px;
+    font-size: .9rem;
+    border-radius: 6px;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.browsebtn:hover::after{
+    opacity: 1;
+    top: 50px;
+}
+
+#cross{
+    font-size: 1.9rem;
+    display: none;
+}
+
+#cross:hover{
+    color: white;
 }
 
 .search_input{
-    border-radius: 1rem;
-    width: 30rem;
-    color: white;   
-    padding: 15px 20px;
-    background-color: rgb(59, 59, 59);
-    height: 2.5rem;
+    background-color: transparent;
     border: none;
+    color: white;
+    font-size: 1.2rem;
+    width: 82%;
+    outline: none;
+}
+
+.search_input:active ~ .search{
+    border: 3px solid white;
+}
+
+.search_input::placeholder{
+    color: rgb(151, 151, 151);
 }
 
 .btn{
@@ -131,6 +241,29 @@ aside{
     margin: 0 1rem;
 }
 
+.your_lib h3{
+    position: relative;
+}
+
+.your_lib h3::before{
+    content: 'collaps Your Library';
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    color: white;
+    background-color: #212121;
+    padding: 5px;
+    font-size: .8rem;
+    border-radius: 6px;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.your_lib h3:hover::before{
+    opacity: 1;
+    top: -30px;
+}
+
 .your_lib h3:hover,
 .your_lib i:hover{
     color: white;
@@ -141,10 +274,31 @@ aside{
     font-size: 1.2rem;
     padding: 3px;
     border-radius: 50%;
+    position: relative;
 }
 
 .your_lib>i:hover{
     background-color: #212121;
+}
+
+.your_lib i::after{
+    content: 'Create playlist or library';
+    position: absolute;
+    top: -25px;
+    color: white;
+    background-color: #212121;
+    padding: 3px;
+    font-size: .85rem;
+    border-radius: 6px;
+    opacity: 0;
+    transition: all .3s ease;
+    left: -45px;
+    width: 9rem;
+}
+
+.your_lib i:hover::after{
+    opacity: 1;
+    top: -40px;
 }
 
 .create_library{
@@ -312,7 +466,7 @@ aside{
 
 footer{
     display: flex;
-    background: linear-gradient(90deg, rgb(175, 120, 252), rgb(130, 168, 255));
+    background: linear-gradient(90deg, rgb(233, 62, 255), rgb(63, 121, 255));
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
