@@ -19,3 +19,4 @@ searchtype.addEventListener('input', () => {
         brosweBtn.style.display = 'inline-block';
     }
 });
+
